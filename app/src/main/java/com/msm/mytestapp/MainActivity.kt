@@ -9,6 +9,7 @@ import android.view.View
 import android.widget.LinearLayout
 import android.widget.SeekBar
 import android.widget.SeekBar.OnSeekBarChangeListener
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import kotlin.math.cos
 import kotlin.math.pow
@@ -113,6 +114,7 @@ class MainActivity : AppCompatActivity() {
                 MotionEvent.ACTION_UP -> {
                     if (isInCircle(width / 2.toFloat(), height / 2.toFloat(), event, (width / 2 - width / 8).toFloat())) {
                         Log.d("Tap", "Inside the  Circle")
+                        Toast.makeText(context, "Click on the Circle", Toast.LENGTH_SHORT).show()
                     }
                     println(x + ' '.toFloat() + y)
                 }
