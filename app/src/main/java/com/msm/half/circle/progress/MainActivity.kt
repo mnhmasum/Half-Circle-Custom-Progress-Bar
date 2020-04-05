@@ -1,4 +1,4 @@
-package com.msm.mytestapp
+package com.msm.half.circle.progress
 
 import android.content.Context
 import android.graphics.*
@@ -11,6 +11,7 @@ import android.widget.SeekBar
 import android.widget.SeekBar.OnSeekBarChangeListener
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.msm.mytestapp.R
 import kotlin.math.cos
 import kotlin.math.pow
 import kotlin.math.sin
@@ -84,11 +85,11 @@ class MainActivity : AppCompatActivity() {
 
         private fun getXYofAngle(angle: Double, r: Float): PointF {
             val coordinate = PointF()
-            val radians1 = Math.toRadians(angle)
-            val cosAngle1 = cos(radians1)
-            val sinAngle1 = sin(radians1)
-            val pointX = (r * cosAngle1 + x / 2).toFloat()
-            val pointY = (r * sinAngle1 + y / 2).toFloat()
+            val radians = Math.toRadians(angle)
+            val cosAngle = cos(radians)
+            val sinAngle = sin(radians)
+            val pointX = (r * cosAngle + x / 2).toFloat()
+            val pointY = (r * sinAngle + y / 2).toFloat()
             coordinate.x = pointX
             coordinate.y = pointY
             return coordinate
