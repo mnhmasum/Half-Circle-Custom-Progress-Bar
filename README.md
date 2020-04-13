@@ -3,4 +3,4 @@ Its a canvas based half circle progress bar for android.
 
 
 
-![](app/src/main/res/mipmap-hdpi/ic_launcher.png)
+![](app/src/main/res/drawable/screenshot1.png)
