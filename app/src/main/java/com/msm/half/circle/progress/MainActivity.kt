@@ -12,10 +12,9 @@ import android.widget.SeekBar.OnSeekBarChangeListener
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.msm.mytestapp.R
-import kotlin.math.cos
+import java.lang.Math.*
+import java.sql.DriverManager.println
 import kotlin.math.pow
-import kotlin.math.sin
-import kotlin.math.sqrt
 
 /**
  * @author Nazmul Hasan Masum
@@ -88,7 +87,7 @@ class MainActivity : AppCompatActivity() {
             val radians = Math.toRadians(angle)
             val cosAngle = cos(radians)
             val sinAngle = sin(radians)
-            val pointX = (r * cosAngle + x / 2).toFloat()
+            val pointX = (r * cosAngle + x / 2).toFloat() // e.g: cos = adj/hype => cos = x/r => x = r cos
             val pointY = (r * sinAngle + y / 2).toFloat()
             coordinate.x = pointX
             coordinate.y = pointY
